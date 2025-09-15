@@ -11,6 +11,7 @@ def list_agents():
     return agents_db
 
 def get_agent(agent_id: int):
-    if 0 <= agent_id < len(agents_db):
-        return agents_db[agent_id]
-    return None
+    try:
+        return agents_db[agent_id] if 0 <= agent_id < len(agents_db) else None
+    except IndexError:
+        return None

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from src.models import Agent
+from src.models.Agent import Agent   # import the class, not the module
 from src.controller import AgentController
 
 router = APIRouter()
